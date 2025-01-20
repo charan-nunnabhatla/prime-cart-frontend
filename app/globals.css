@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "custom";
+  src: url("/fonts/Ramabhadra-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  color: beige;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100svh;
+  height: 100%;
+  width: 100%;
+  background: #000;
 }
