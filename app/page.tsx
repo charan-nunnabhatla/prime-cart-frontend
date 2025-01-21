@@ -1,10 +1,12 @@
 import Canvas from "@/components/canvas";
 import Header from "@/components/header";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div id="root" className="h-full w-full min-h-svh ">
-      <div id="canva-root" className="relative h-[70%] w-full bg-gradient-to-b from-green-600 to-green-400">
+      <div
+        id="canva-root"
+        className="relative h-[40%] w-full bg-gradient-to-b from-green-600 to-green-400">
         <Canvas />
       </div>
       <div
