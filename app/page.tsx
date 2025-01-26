@@ -1,21 +1,25 @@
-import Canvas from "@/components/canvas";
-import Header from "@/components/header";
+"use client";
 
-export default async function Home() {
+import { fetchProductData, productDataType } from "@/atoms";
+import Canvas from "@/components/canvas";
+import Card from "@/components/card";
+import { useAtomValue } from "jotai";
+
+export default function Home() {
+  const productData = useAtomValue(fetchProductData);
+  console.log("produts: ", productData);
   return (
-    <div id="root" className="h-full w-full min-h-svh ">
+    <main id="root" className="h-full w-full min-h-svh ">
       <div
         id="canva-root"
         className="relative h-[40%] w-full bg-gradient-to-b from-green-600 to-green-400">
         <Canvas />
       </div>
-      <div
-        id="header-root"
-        className="fixed z-10 bg-transparent top-0 w-full h-fit">
-        <Header />
+      <div className=" grid grid-cols-[repeat(auto-fill,minmax(320px,auto))] gap-2 h-fit w-full p-3 bg-blue-400">
+        {productData.map((value: productDataType) => {
+          return <Card key={value.asin} {...value} />;
+        })}
       </div>
-
-      <div className=" h-full w-full bg-blue-400"></div>
-    </div>
+    </main>
   );
 }
