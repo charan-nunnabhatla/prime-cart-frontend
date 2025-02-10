@@ -1,7 +1,7 @@
 "use client";
 
 import { fetchProductData, productDataType } from "@/atoms";
-import Canvas from "@/components/canvas";
+import Canvas from "@/components/hero";
 import Card from "@/components/card";
 import { useAtomValue } from "jotai";
 
