@@ -1,14 +1,11 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import fruitBasketData from "@/asserts/fruit-basket.json";
+// import dynamic from "next/dynamic";
 import { CiSearch } from "react-icons/ci";
 import fetchData from "@/network/fetch-data";
 import { ChangeEvent } from "react";
-import { useSetAtom } from "jotai";
-import { fetchProductData } from "@/atoms";
 
-const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
+// const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function Canvas() {
   const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
