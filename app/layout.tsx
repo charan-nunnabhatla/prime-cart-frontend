@@ -16,6 +16,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Prime Cart",
   description: "One Stop For All Your Needs",
+  openGraph: {
+    title: "Prime Cart",
+    //! Include URL and Images....
+    url: "",
+    images: [""],
+    type: "website",
+    countryName: "India",
+    description: "Search Across 1Cr+ Products",
+    emails: ["charannunnabhatla@gmail.com"],
+  },
 };
 
 export default function RootLayout({
@@ -26,9 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header/>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>
