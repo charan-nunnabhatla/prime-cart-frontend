@@ -1,7 +1,7 @@
 import { productDataType } from "@/atoms";
+import { useSetAtom } from "jotai";
 
 export default async function fetchData(title: string) {
-  // const setProdutsData = useSetAtom(fetchProductData);
   //   console.log(title);
 
   const url = process.env.NEXT_PUBLIC_ngrokURL as string;
@@ -17,6 +17,5 @@ export default async function fetchData(title: string) {
 
   const data: productDataType[] = await res.json();
   console.log("from fetch method ", data);
-  // setProdutsData(Object.entries(data));
-  return data;
+   return data;
 }
